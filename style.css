@@ -1,0 +1,220 @@
+/* ========================================================== 
+						Section: Color Reference
+========================================================== */
+/* 
+dark blue = #254b7b
+light blue = #80C3E2
+orange = #ee4823
+yellow = #fbb116
+
+
+
+
+/* ========================================================== 
+						Section: Text Styling
+========================================================== */
+h5 {
+      font-family: "henderson-slab-basic", serif; /* sets the font family for h5 style text*/
+	font-weight: 600; /* change the font size in individual section style */
+	font-style: normal;
+	color: #254b7b;  /* dark blue */
+    }
+
+h1 {
+	font-family: "josefin-sans", sans-serif; /* section headers in bold */
+font-weight: 700;
+font-style: normal;
+	color: #254b7b; /* dark blue */
+}
+
+p{
+	font-family: "josefin-sans", sans-serif;
+font-weight: 400;
+font-style: normal;
+	color: #254b7b; /* dark blue */
+}
+
+h_backup_font{
+	font-family: "muli", sans-serif;
+font-weight: 400;
+font-style: normal;
+	font-size: 18px;
+}
+
+
+
+
+
+
+/* ========================================================== 
+						Section: Background
+========================================================== */
+body {
+    background-color: #80C3E2;
+}
+
+
+
+
+
+
+/* ========================================================== 
+						Section: Nav Bar 
+========================================================== */
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.all_nav_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav_logo {
+  margin-left: 20px;
+}
+
+.button-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.nav_button {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.nav_button h5 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.gif-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gif-overlay img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+	opacity: 0; /* starts hidden */
+}
+
+.button-container.hovered .gif-overlay {
+  opacity: 1;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fbb116;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.dropdown-content a {
+  color: #254b7b;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+	font-family: "josefin-sans", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.dropdown-content a:hover {
+  background-color: #ee4823;
+}
+
+.button-container.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+/* ========================================================== 
+						Section: About Page
+========================================================== */
+
+.about-content {
+	display: flex;
+  align-items: flex-start;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+.about-section {
+  position: relative;
+  background-image:url("images/wave_white.png");
+  background-size: cover;    /* cover entire container */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat;
+  padding: 50px; /* or whatever padding you want inside */
+  color: white; /* adjust text color for contrast */
+}
+.rotate-text { /* only affects About title */
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  font-size: 60px;
+  margin: 0;
+}
+
+.about-text {
+  flex: 1;
+	min-width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================================== 
+						Section: Inserts
+========================================================== */
+
+.card.col-md-4.col-xl-12 .card-body .card-text {
+    background-color: #FFFFFF;
+    background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,255,255,1.00) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,255,255,1.00) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,255,255,1.00) 100%);
+    background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(255,255,255,1.00) 100%);
+}
+.rounded-oval {
+  width: 200px;
+  height: 300px;
+  object-fit: cover; /* ensures the image covers the container while maintaining the aspect ratio */
+  border-radius: 50%; /* for the rounded circle effect */
+}
